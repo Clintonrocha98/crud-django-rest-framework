@@ -60,14 +60,14 @@ class ToyAPITestCase(APITestCase):
         """
         data = {
             "name": "Toy 4",
-            # Description is missing
-            "price": 100,
+            "description": "Description 4",
+            # Price is missing
             "category": "Category 4",
             "was_included_in_home": False,
         }
         response = self.client.post(self.toys_list_url, data, format="json")
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        self.assertIn("description", response.data)
+        self.assertIn("price", response.data)
 
     def test_delete_toy(self):
         """
