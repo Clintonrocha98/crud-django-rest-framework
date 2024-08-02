@@ -35,7 +35,7 @@ Make sure you have the following installed:
 Clone the repository to your local machine:
 
 ```bash
-git clone your-github-repo-url
+git clone git@github.com:Clintonrocha98/crud-django-rest-framework.git
 ```
 
 <h3>Installing Dependencies</h3>
