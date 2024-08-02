@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from .models import Toy
+from .serializers import ToySerializer
 
-# Create your views here.
+
+class ToysViewSet(ModelViewSet):
+    queryset = Toy.objects.all()
+    serializer_class = ToySerializer
